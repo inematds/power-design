@@ -8,7 +8,7 @@
 
 **Brand DNA × 20 codified design principles → beautiful HTML decks, on demand.**
 
-[**See the principles →**](https://power-design.vercel.app) ·
+[**See the principles →**](https://inematds.github.io/power-design/) ·
 [**Join the community →**](https://bit.ly/3PATPoL)
 
 </div>
@@ -28,7 +28,7 @@ The result: every deck is both on-brand and objectively well-designed. No purple
 
 ## The 20 rules, illustrated
 
-Every slide passes the same 20 checks. **[Read the full field manual →](https://power-design.vercel.app)**
+Every slide passes the same 20 checks. **[Read the full field manual →](https://inematds.github.io/power-design/)**
 
 <div align="center">
 
@@ -68,7 +68,7 @@ Every slide passes the same 20 checks. **[Read the full field manual →](https:
 ## Install
 
 ```bash
-git clone https://github.com/ItsssssJack/power-design ~/.claude/skills/power-design
+git clone https://github.com/inematds/power-design ~/.claude/skills/power-design
 ```
 
 Then in Claude Code:
@@ -132,7 +132,7 @@ MIT — see [LICENSE](LICENSE).
 <div align="center">
 
 **Built by Jack Roberts** ·
-[**Vercel showcase**](https://power-design.vercel.app) ·
+[**Showcase**](https://inematds.github.io/power-design/) ·
 [**Community**](https://bit.ly/3PATPoL)
 
 </div>
