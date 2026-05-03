@@ -4,31 +4,31 @@
 
 # Power Design
 
-### A Claude skill for slides that don't look like AI made them.
+### Uma skill do Claude para slides que não parecem feitos por IA.
 
-**Brand DNA × 20 codified design principles → beautiful HTML decks, on demand.**
+**Brand DNA × 20 princípios de design codificados → decks HTML bonitos, sob demanda.**
 
-[**See the principles →**](https://inematds.github.io/power-design/) ·
-[**Join the community →**](https://bit.ly/3PATPoL)
+[**Ver os princípios →**](https://inematds.github.io/power-design/) ·
+[**Comunidade →**](https://bit.ly/3PATPoL)
 
 </div>
 
 ---
 
-## What it does
+## O que faz
 
-Power Design is a Claude Code skill that combines two things every other AI deck generator misses:
+Power Design é uma skill do Claude Code que combina duas coisas que outros geradores de deck de IA ignoram:
 
-1. **Brand DNA** — extracted live from any URL via Firecrawl, or picked from **72+ pre-built brand systems** (Stripe, Apple, Linear, Spotify, Vercel, Notion, Tesla, Airbnb…)
-2. **20 codified design principles** — pulled from Tufte, Reynolds, Duarte, Williams, Refactoring UI, Müller-Brockmann, Mayer, WCAG 2.2
+1. **Brand DNA** — extraído ao vivo de qualquer URL via Firecrawl, ou escolhido entre **72+ sistemas de marca pré-prontos** (Stripe, Apple, Linear, Spotify, Vercel, Notion, Tesla, Airbnb…)
+2. **20 princípios de design codificados** — tirados de Tufte, Reynolds, Duarte, Williams, Refactoring UI, Müller-Brockmann, Mayer, WCAG 2.2
 
-The result: every deck is both on-brand and objectively well-designed. No purple gradients. No six-bullet hero slides. No drop shadows on bars.
+O resultado: cada deck é ao mesmo tempo consistente com a marca e objetivamente bem projetado. Sem gradientes roxos. Sem slides herói com seis bullets. Sem sombras em barras.
 
 ---
 
-## The 20 rules, illustrated
+## As 20 regras, ilustradas
 
-Every slide passes the same 20 checks. **[Read the full field manual →](https://inematds.github.io/power-design/)**
+Cada slide passa pelos mesmos 20 critérios. **[Leia o manual completo →](https://inematds.github.io/power-design/)**
 
 <div align="center">
 
@@ -40,99 +40,98 @@ Every slide passes the same 20 checks. **[Read the full field manual →](https:
 
 </div>
 
-| # | Rule | Source |
+| # | Regra | Fonte |
 |---:|---|---|
-|  1 | One idea per slide | Reynolds; Duarte |
-|  2 | Glanceable in ≤3 seconds | Duarte; NN/g |
-|  3 | ≤7±2 visual chunks; ideal 3–5 | Miller 1956; Cowan 2001 |
-|  4 | ≥40% whitespace ratio | Refactoring UI; Reynolds |
-|  5 | 5% edge safe-zone, all sides | Broadcast title-safe |
-|  6 | Type on a modular scale (1.25–1.618) | Tschichold; Bringhurst |
-|  7 | Maximum 4 type sizes per slide | Refactoring UI |
-|  8 | Body ≥24px, title ≥48px | Reynolds; Duarte |
-|  9 | Line-height 1.4–1.6 body, 1.05–1.2 display | Butterick; Bringhurst |
-| 10 | Line length ≤60 characters | Bringhurst |
-| 11 | WCAG contrast ≥4.5:1 body, aim 7:1 (AAA) | WCAG 2.2 |
-| 12 | 60-30-10 color split | Itten; Refactoring UI |
-| 13 | One accent per slide | Tufte |
-| 14 | Never encode meaning by hue alone | WCAG 1.4.1 |
-| 15 | 8pt grid for all spacing | Bryn Jackson; Material |
-| 16 | Align everything to one grid | Müller-Brockmann |
-| 17 | Proximity: related ≤16px, unrelated ≥48px | Gestalt; Williams |
-| 18 | Data-ink ratio ≥80% | Tufte 1983 |
-| 19 | F-pattern: headline + key visual top-left | NN/g eye-tracking |
-| 20 | Two valid modes — pick one and stay | Tufte vs Reynolds |
+|  1 | Uma ideia por slide | Reynolds; Duarte |
+|  2 | Legível em ≤3 segundos | Duarte; NN/g |
+|  3 | ≤7±2 blocos visuais; ideal 3–5 | Miller 1956; Cowan 2001 |
+|  4 | Proporção de espaço em branco ≥40% | Refactoring UI; Reynolds |
+|  5 | Zona de segurança de 5% em todas as bordas | Broadcast title-safe |
+|  6 | Tipografia em escala modular (1.25–1.618) | Tschichold; Bringhurst |
+|  7 | Máximo 4 tamanhos de tipo por slide | Refactoring UI |
+|  8 | Corpo ≥24px, título ≥48px | Reynolds; Duarte |
+|  9 | Entrelinhas 1.4–1.6 corpo, 1.05–1.2 display | Butterick; Bringhurst |
+| 10 | Comprimento de linha ≤60 caracteres | Bringhurst |
+| 11 | Contraste WCAG ≥4.5:1 corpo, ideal 7:1 (AAA) | WCAG 2.2 |
+| 12 | Distribuição de cor 60-30-10 | Itten; Refactoring UI |
+| 13 | Um destaque por slide | Tufte |
+| 14 | Nunca codificar significado apenas por cor | WCAG 1.4.1 |
+| 15 | Grade de 8pt para todos os espaçamentos | Bryn Jackson; Material |
+| 16 | Tudo alinhado a uma grade | Müller-Brockmann |
+| 17 | Proximidade: relacionados ≤16px, distintos ≥48px | Gestalt; Williams |
+| 18 | Taxa de tinta de dados ≥80% | Tufte 1983 |
+| 19 | Padrão F: título + visual principal no topo esquerdo | NN/g eye-tracking |
+| 20 | Dois modos válidos — escolha um e mantenha | Tufte vs Reynolds |
 
 ---
 
-## Install
+## Instalação
 
 ```bash
 git clone https://github.com/inematds/power-design ~/.claude/skills/power-design
 ```
 
-Then in Claude Code:
+Depois no Claude Code:
 
 ```
-> use power-design — make me a deck for stripe.com about our new product launch
+> use power-design — crie um deck para stripe.com sobre o nosso novo lançamento
 ```
 
-The skill will:
-1. Ask you for a brand (paste URL, pick from library, or skip for default)
-2. Extract brand DNA via Firecrawl (~30 seconds)
-3. Ask for content brief (headline + 3–5 points)
-4. Generate `slides.html` applying brand DNA × 20 rules
-5. Open in browser. Refine via natural conversation.
+A skill vai:
+1. Perguntar pela marca (cole uma URL, escolha da biblioteca, ou pule para o padrão)
+2. Extrair o Brand DNA via Firecrawl (~30 segundos)
+3. Pedir um briefing de conteúdo (título + 3–5 pontos)
+4. Gerar `slides.html` aplicando Brand DNA × 20 regras
+5. Abrir no browser. Refinar via conversa natural.
 
 ---
 
-## Brand library — 72 pre-built systems
+## Biblioteca de marcas — 72+ sistemas pré-prontos
 
-| Tech / AI | Finance | Auto / Lifestyle | Media | Productivity |
+| Tech / IA | Finanças | Auto / Lifestyle | Mídia | Produtividade |
 |---|---|---|---|---|
 | Anthropic / Claude · OpenAI · DeepSeek · Linear · Vercel · Stripe · Cursor · GitHub · Figma · Webflow · Framer · Mintlify · Notion · Raycast · Lovable · Resend · Sentry · Supabase · Superhuman · MongoDB · Sanity · Posthog · Replicate · Runway · Hashicorp · ElevenLabs · Cal · Clay · Composio · ClickHouse · Cohere · Mistral · Together · x.ai · Ollama · OpenCode · Expo · Pinterest · Glaido | Stripe · Mastercard · Coinbase · Binance · Kraken · Revolut · Wise · Shopify | Tesla · BMW · BMW M · Bugatti · Ferrari · Lamborghini · Renault · Nike · Airbnb · Apple · Starbucks · Grind · Vodafone | The Verge · Wired · Spotify · YouTube · Sony · PlayStation · IBM | Notion · Slack · Miro · Intercom · Zapier · Uber · NVIDIA · SpaceX · VoltAgent · Warp |
 
-Each entry is a single `brand-style.md` file: colors, type, voice, components, source URL. Add your own using `brands/_template.md`.
+Cada entrada é um único arquivo `brand-style.md`: cores, tipografia, voz, componentes, URL de origem. Adicione a sua usando `brands/_template.md`.
 
 ---
 
-## How the skill works (under the hood)
+## Como a skill funciona (por dentro)
 
 ```
    ┌─────────────────────────────────────────┐
    │  1. Brand DNA       (URL → Firecrawl)   │
-   │     OR pick from    brands/<name>.md    │
+   │     OU escolha de  brands/<nome>.md     │
    ├─────────────────────────────────────────┤
-   │  2. Design rules    principles/...md     │
+   │  2. Regras de design  principles/...md  │
    ├─────────────────────────────────────────┤
-   │  3. Compose         brand × rules → HTML │
+   │  3. Composição   brand × regras → HTML  │
    └─────────────────────────────────────────┘
                       ↓
                   slides.html
 ```
 
-The skill's runbook lives in `SKILL.md`. The 20 design principles (with research citations and numeric thresholds) live in `principles/design-principles.md`.
+O runbook da skill está em `SKILL.md`. Os 20 princípios de design (com citações de pesquisa e limites numéricos) estão em `principles/design-principles.md`.
 
 ---
 
-## Credits
+## Créditos
 
-- **Brand library** — forked and restructured from [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md), with permission and credit.
-- **Design research** — Edward Tufte, Garr Reynolds, Nancy Duarte, Robin Williams (CRAP), Adam Wathan & Steve Schoger (Refactoring UI), Josef Müller-Brockmann, Matthew Butterick, Robert Bringhurst, Richard Mayer, Nielsen Norman Group, WCAG 2.2.
-- **Illustrations** — generated via Kie.ai nano-banana 2.
+- **Biblioteca de marcas** — derivada e reestruturada de [VoltAgent/awesome-design-md](https://github.com/VoltAgent/awesome-design-md), com permissão e crédito.
+- **Pesquisa de design** — Edward Tufte, Garr Reynolds, Nancy Duarte, Robin Williams (CRAP), Adam Wathan & Steve Schoger (Refactoring UI), Josef Müller-Brockmann, Matthew Butterick, Robert Bringhurst, Richard Mayer, Nielsen Norman Group, WCAG 2.2.
+- **Ilustrações** — geradas via Kie.ai nano-banana 2.
 
 ---
 
-## License
+## Licença
 
-MIT — see [LICENSE](LICENSE).
+MIT — veja [LICENSE](LICENSE).
 
 ---
 
 <div align="center">
 
-**Built by Jack Roberts** ·
-[**Showcase**](https://inematds.github.io/power-design/) ·
-[**Community**](https://bit.ly/3PATPoL)
+[**Princípios →**](https://inematds.github.io/power-design/) ·
+[**Comunidade →**](https://bit.ly/3PATPoL)
 
 </div>

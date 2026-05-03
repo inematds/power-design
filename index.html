@@ -1,12 +1,12 @@
 <!doctype html>
-<html lang="en">
+<html lang="pt-BR">
 <head>
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width,initial-scale=1">
-<title>Power Design — The 20 Principles</title>
-<meta name="description" content="A Claude skill for slides that don't look like AI made them. Brand DNA × 20 codified design principles → beautiful HTML decks, on demand.">
-<meta property="og:title" content="Power Design — The 20 Principles">
-<meta property="og:description" content="20 codified design principles for slides that don't look like AI made them.">
+<title>Power Design — Os 20 Princípios</title>
+<meta name="description" content="Uma skill do Claude para slides que não parecem feitos por IA. Brand DNA × 20 princípios de design codificados → decks HTML bonitos, sob demanda.">
+<meta property="og:title" content="Power Design — Os 20 Princípios">
+<meta property="og:description" content="20 princípios de design codificados para slides que não parecem feitos por IA.">
 <meta property="og:image" content="principles/images/cta-go-deeper.png">
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -42,7 +42,7 @@
   /* nav */
   .nav{position:sticky;top:0;z-index:20;background:rgba(246,244,238,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.01em}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.01em;text-decoration:none}
   .dot{width:10px;height:10px;border-radius:999px;background:var(--accent);display:inline-block}
   .nav a.link{color:var(--ink-2);text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
   .nav a.link:hover{color:var(--ink)}
@@ -151,7 +151,6 @@
   .foot a{color:var(--ink-2);text-decoration:none;font-weight:500;font-size:14px;margin-left:24px}
   .foot a:hover{color:var(--accent)}
 
-  /* selection + accent underline */
   ::selection{background:var(--accent);color:#fff}
 </style>
 </head>
@@ -161,9 +160,9 @@
   <div class="wrap nav-inner">
     <a href="#" class="brand"><span class="dot"></span> Power Design</a>
     <nav>
-      <a class="link" href="#principles">Principles</a>
-      <a class="link" href="#how">How it works</a>
-      <a class="link" href="#brands">Brand library</a>
+      <a class="link" href="#principios">Princípios</a>
+      <a class="link" href="#como-funciona">Como funciona</a>
+      <a class="link" href="#marcas">Marcas</a>
       <a class="cta" href="https://github.com/inematds/power-design">GitHub <span class="arrow">→</span></a>
     </nav>
   </div>
@@ -171,96 +170,92 @@
 
 <section class="hero">
   <div class="wrap">
-    <div class="eyebrow"><span class="dot"></span> A Claude Code skill · v1.0</div>
-    <h1>Slides that don't look like <span class="accent">AI</span> made them.</h1>
-    <p class="lead">Brand DNA × 20 codified design principles → beautiful HTML decks, on demand. No purple gradients. No six-bullet hero slides. No drop shadows on bars.</p>
+    <div class="eyebrow"><span class="dot"></span> Uma skill do Claude Code · v1.0</div>
+    <h1>Slides que não parecem feitos por <span class="accent">IA</span>.</h1>
+    <p class="lead">Brand DNA × 20 princípios de design codificados → decks HTML bonitos, sob demanda. Sem gradientes roxos. Sem slides herói com seis bullets. Sem sombras em barras.</p>
     <div class="hero-actions">
-      <a class="btn btn-primary" href="#principles">See the 20 principles <span class="arrow">↓</span></a>
-      <a class="btn btn-ghost" href="https://github.com/inematds/power-design">Install from GitHub <span class="arrow">→</span></a>
+      <a class="btn btn-primary" href="#principios">Ver os 20 princípios <span class="arrow">↓</span></a>
+      <a class="btn btn-ghost" href="https://github.com/inematds/power-design">Instalar pelo GitHub <span class="arrow">→</span></a>
     </div>
   </div>
 </section>
 
 <div class="wrap">
   <div class="meta">
-    <div><div class="k">Principles</div><div class="v">20</div></div>
-    <div><div class="k">Brand systems</div><div class="v">72+</div></div>
-    <div><div class="k">Sources cited</div><div class="v">10+</div></div>
-    <div><div class="k">License</div><div class="v">MIT</div></div>
+    <div><div class="k">Princípios</div><div class="v">20</div></div>
+    <div><div class="k">Sistemas de marca</div><div class="v">72+</div></div>
+    <div><div class="k">Fontes citadas</div><div class="v">10+</div></div>
+    <div><div class="k">Licença</div><div class="v">MIT</div></div>
   </div>
 </div>
 
-<section id="principles">
+<section id="principios">
   <div class="wrap">
     <div class="section-head">
-      <h2>The 20 rules, illustrated.</h2>
-      <p>Every slide passes the same 20 checks — pulled from Tufte, Reynolds, Duarte, Williams, Refactoring UI, Müller-Brockmann, Mayer, and WCAG 2.2.</p>
+      <h2>As 20 regras, ilustradas.</h2>
+      <p>Cada slide passa pelos mesmos 20 critérios — tirados de Tufte, Reynolds, Duarte, Williams, Refactoring UI, Müller-Brockmann, Mayer e WCAG 2.2.</p>
     </div>
-
     <div class="rules" id="rule-grid"></div>
   </div>
 </section>
 
-<section id="how" style="background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
+<section id="como-funciona" style="background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
   <div class="wrap">
     <div class="section-head">
-      <h2>How the skill works.</h2>
-      <p>Three layers, one HTML file. The runbook is in <span class="mono">SKILL.md</span>; the rules in <span class="mono">principles/design-principles.md</span>.</p>
+      <h2>Como a skill funciona.</h2>
+      <p>Três camadas, um arquivo HTML. O runbook está em <span class="mono">SKILL.md</span>; as regras em <span class="mono">principles/design-principles.md</span>.</p>
     </div>
-
     <div class="how">
       <ol>
         <li>
           <div>
             <h4>Brand DNA</h4>
-            <p>Paste a URL — Firecrawl extracts colors, type, voice, and components in ~30 seconds. Or pick from 72 pre-built brand systems.</p>
+            <p>Cole uma URL — o Firecrawl extrai cores, tipografia, voz e componentes em ~30 segundos. Ou escolha um dos 72 sistemas de marca pré-prontos.</p>
           </div>
         </li>
         <li>
           <div>
-            <h4>Design rules</h4>
-            <p>The 20 principles are loaded as numeric thresholds — whitespace ratio, contrast, modular scale, 8pt grid — not vibes.</p>
+            <h4>Regras de design</h4>
+            <p>Os 20 princípios são carregados como limites numéricos — proporção de espaço em branco, contraste, escala modular, grade de 8pt — não como feeling.</p>
           </div>
         </li>
         <li>
           <div>
-            <h4>Compose</h4>
-            <p>Brand × rules → <span class="mono">slides.html</span>. Open in browser. Refine via natural conversation.</p>
+            <h4>Composição</h4>
+            <p>Marca × regras → <span class="mono">slides.html</span>. Abra no browser. Refine via conversa natural.</p>
           </div>
         </li>
       </ol>
-
       <div>
         <div class="install">
-<span class="c"># Install</span>
+<span class="c"># Instalar</span>
 <span class="p">git clone</span> https://github.com/inematds/power-design \
   ~/.claude/skills/power-design
 
-<span class="c"># In Claude Code</span>
-<span class="p">&gt;</span> use power-design — make me a deck for
-  <span class="s">stripe.com</span> about our new product launch
+<span class="c"># No Claude Code</span>
+<span class="p">&gt;</span> use power-design — crie um deck para
+  <span class="s">stripe.com</span> sobre o nosso novo lançamento
         </div>
       </div>
     </div>
   </div>
 </section>
 
-<section id="brands">
+<section id="marcas">
   <div class="wrap">
     <div class="section-head">
-      <h2>72+ pre-built brand systems.</h2>
-      <p>Each entry is a single <span class="mono">brand-style.md</span> file: colors, type, voice, components, source URL.</p>
+      <h2>72+ sistemas de marca pré-prontos.</h2>
+      <p>Cada entrada é um único arquivo <span class="mono">brand-style.md</span>: cores, tipografia, voz, componentes, URL de origem.</p>
     </div>
-
     <div class="brand-cats">
       <div class="cat">
-        <h5>Tech / AI</h5>
+        <h5>Tech / IA</h5>
         <ul>
           <li>Anthropic</li><li>Claude</li><li>OpenAI</li><li>Linear</li><li>Vercel</li><li>Stripe</li><li>Cursor</li><li>GitHub</li><li>Figma</li><li>Notion</li><li>Raycast</li><li>Supabase</li><li>Resend</li><li>Cohere</li><li>Mistral</li>
         </ul>
       </div>
       <div class="cat">
-        <h5>Finance</h5>
+        <h5>Finanças</h5>
         <ul>
           <li>Stripe</li><li>Mastercard</li><li>Coinbase</li><li>Binance</li><li>Kraken</li><li>Revolut</li><li>Wise</li><li>Shopify</li>
         </ul>
@@ -272,13 +267,13 @@
         </ul>
       </div>
       <div class="cat">
-        <h5>Media</h5>
+        <h5>Mídia</h5>
         <ul>
           <li>The Verge</li><li>Wired</li><li>Spotify</li><li>YouTube</li><li>Sony</li><li>PlayStation</li><li>IBM</li>
         </ul>
       </div>
       <div class="cat">
-        <h5>Productivity</h5>
+        <h5>Produtividade</h5>
         <ul>
           <li>Notion</li><li>Slack</li><li>Miro</li><li>Intercom</li><li>Zapier</li><li>Uber</li><li>NVIDIA</li><li>SpaceX</li>
         </ul>
@@ -289,37 +284,37 @@
 
 <footer>
   <div class="wrap foot">
-    <p>MIT licensed · Brand library forked from VoltAgent/awesome-design-md · Illustrations via Kie.ai nano-banana 2.</p>
+    <p>Licença MIT · Biblioteca de marcas derivada de VoltAgent/awesome-design-md · Ilustrações via Kie.ai nano-banana 2.</p>
     <div>
       <a href="https://github.com/inematds/power-design">GitHub</a>
-      <a href="https://bit.ly/3PATPoL">Community</a>
-      <a href="#">Top ↑</a>
+      <a href="https://bit.ly/3PATPoL">Comunidade</a>
+      <a href="#">Início ↑</a>
     </div>
   </div>
 </footer>
 
 <script>
 const rules = [
-  ["One idea per slide","≤10-word headline + one supporting block. Need a second headline? Split the slide.","Reynolds · Duarte"],
-  ["Glanceable in ≤3 seconds","A viewer must extract the slide's single message in ≤3s. Otherwise simplify or split.","Duarte · NN/g"],
-  ["≤7±2 visual chunks; ideal 3–5","Group with proximity so the brain perceives 3–5 chunks, not 9 atoms.","Miller 1956 · Cowan 2001"],
-  ["≥40% whitespace ratio","≥40% of slide area is empty. Hero/title slides: ≥60%.","Refactoring UI · Reynolds"],
-  ["5% edge safe-zone, all sides","No text, logos, or focal elements inside that band — ≥96px on 1920×1080.","Broadcast title-safe"],
-  ["Type on a modular scale","Pick one ratio (1.25–1.618). Derive every size from it. Never ad-hoc.","Tschichold · Bringhurst"],
-  ["Maximum 4 type sizes per slide","Display, subhead, body, caption — done. ≤6 sizes per deck.","Refactoring UI"],
-  ["Body ≥24px, title ≥48px","Caption floor 18px. Anything smaller is unreadable from row 10.","Reynolds · Duarte"],
-  ["Line-height 1.4–1.6 / 1.05–1.2","Looser for body, tighter for display.","Butterick · Bringhurst"],
-  ["Line length ≤60 characters","Slides shouldn't have paragraphs — but if they do, cap line length.","Bringhurst"],
-  ["WCAG contrast ≥4.5:1, aim 7:1","≥3:1 for large text. Aim AAA for projector resilience.","WCAG 2.2"],
-  ["60-30-10 color split","60% dominant, 30% secondary, 10% accent. The 10% is where the eye lands.","Itten · Refactoring UI"],
-  ["One accent per slide","Multiple accents = no accent. Smallest effective difference.","Tufte"],
-  ["Never encode meaning by hue alone","Pair color with shape, label, weight, or icon. Color-blind safety.","WCAG 1.4.1"],
-  ["8pt grid for all spacing","Every margin, padding, gap = multiple of 8. (4px allowed for icon work.)","Bryn Jackson · Material"],
-  ["Align everything to one grid","12-column with 24–32px gutters. No optical drift.","Müller-Brockmann"],
-  ["Proximity: ≤16px / ≥48px","Related items ≤16px apart; unrelated ≥48px. Distance = relationship.","Gestalt · Williams"],
-  ["Data-ink ratio ≥80%","Strip every chart pixel that isn't data. No 3D, no gradients, no chartjunk.","Tufte 1983"],
-  ["F-pattern: headline top-left","First 200px vertical = primary attention zone.","NN/g eye-tracking"],
-  ["Two valid modes — pick one","Presenter (sparse, image-led) vs document (dense, scannable). Never mix.","Tufte vs Reynolds"]
+  ["Uma ideia por slide","Título ≤10 palavras + um bloco de suporte. Precisa de um segundo título? Divida o slide.","Reynolds · Duarte"],
+  ["Legível em ≤3 segundos","O espectador deve extrair a mensagem do slide em ≤3s. Do contrário, simplifique ou divida.","Duarte · NN/g"],
+  ["≤7±2 blocos visuais; ideal 3–5","Agrupe por proximidade para que o cérebro perceba 3–5 blocos, não 9 átomos.","Miller 1956 · Cowan 2001"],
+  ["Proporção de espaço em branco ≥40%","≥40% da área do slide deve ser vazia. Slides herói/título: ≥60%.","Refactoring UI · Reynolds"],
+  ["Zona de segurança de 5% em todas as bordas","Nenhum texto, logo ou elemento focal dentro dessa faixa — ≥96px em 1920×1080.","Broadcast title-safe"],
+  ["Tipografia em escala modular","Escolha uma razão (1.25–1.618). Derive todos os tamanhos dela. Nunca ad-hoc.","Tschichold · Bringhurst"],
+  ["Máximo 4 tamanhos de tipo por slide","Display, subtítulo, corpo, legenda — pronto. ≤6 tamanhos por deck.","Refactoring UI"],
+  ["Corpo ≥24px, título ≥48px","Legenda mínima 18px. Qualquer coisa menor é ilegível da fileira 10.","Reynolds · Duarte"],
+  ["Entrelinha 1.4–1.6 / 1.05–1.2","Mais espaçado para corpo, mais compacto para display.","Butterick · Bringhurst"],
+  ["Comprimento de linha ≤60 caracteres","Slides não deveriam ter parágrafos — mas se tiverem, limite o comprimento.","Bringhurst"],
+  ["Contraste WCAG ≥4.5:1, ideal 7:1","≥3:1 para texto grande. Objetivo AAA para resistência ao projetor.","WCAG 2.2"],
+  ["Distribuição de cor 60-30-10","60% dominante, 30% secundária, 10% destaque. O olho vai para o 10%.","Itten · Refactoring UI"],
+  ["Um destaque por slide","Múltiplos destaques = nenhum destaque. Menor diferença eficaz.","Tufte"],
+  ["Nunca codificar significado apenas por cor","Combine cor com forma, rótulo, peso ou ícone. Segurança para daltônicos.","WCAG 1.4.1"],
+  ["Grade de 8pt para todos os espaçamentos","Toda margem, padding, gap = múltiplo de 8. (4px permitido para ícones.)","Bryn Jackson · Material"],
+  ["Tudo alinhado a uma grade","12 colunas com 24–32px de gutter. Sem deriva óptica.","Müller-Brockmann"],
+  ["Proximidade: ≤16px / ≥48px","Itens relacionados ≤16px; itens distintos ≥48px. Distância = relação.","Gestalt · Williams"],
+  ["Taxa de tinta de dados ≥80%","Elimine todo pixel de gráfico que não seja dado. Sem 3D, sem gradientes, sem chartjunk.","Tufte 1983"],
+  ["Padrão F: título no topo esquerdo","Os primeiros 200px verticais = zona de atenção primária.","NN/g eye-tracking"],
+  ["Dois modos válidos — escolha um","Apresentação (esparso, imagem-líder) vs documento (denso, escaneável). Nunca misture.","Tufte vs Reynolds"]
 ];
 const slugs = [
   "rule-01-one-idea","rule-02-glanceable","rule-03-chunks","rule-04-whitespace",
@@ -333,9 +328,9 @@ grid.innerHTML = rules.map((r, i) => {
   const n = String(i+1).padStart(2,'0');
   return `
     <article class="rule">
-      <img class="rule-img" loading="lazy" src="principles/images/${slugs[i]}.png" alt="Rule ${n} — ${r[0]}">
+      <img class="rule-img" loading="lazy" src="principles/images/${slugs[i]}.png" alt="Regra ${n} — ${r[0]}">
       <div class="rule-body">
-        <div class="rule-num">RULE ${n}</div>
+        <div class="rule-num">REGRA ${n}</div>
         <h3 class="rule-title">${r[0]}</h3>
         <p class="rule-desc">${r[1]}</p>
         <div class="rule-src">${r[2]}</div>
