@@ -42,7 +42,10 @@
   /* nav */
   .nav{position:sticky;top:0;z-index:20;background:rgba(246,244,238,.85);backdrop-filter:blur(10px);border-bottom:1px solid var(--rule)}
   .nav-inner{display:flex;align-items:center;justify-content:space-between;height:64px}
-  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.01em;text-decoration:none}
+  .brand-wrap{display:flex;align-items:center;gap:16px}
+  .brand{display:flex;align-items:center;gap:12px;font-weight:700;letter-spacing:-.01em;text-decoration:none;color:var(--ink)}
+  .brand-by{font-size:13px;font-weight:600;color:#3b82f6;text-decoration:none;letter-spacing:-.01em}
+  .brand-by:hover{color:#2563eb}
   .dot{width:10px;height:10px;border-radius:999px;background:var(--accent);display:inline-block}
   .nav a.link{color:var(--ink-2);text-decoration:none;font-size:14px;margin-left:24px;font-weight:500}
   .nav a.link:hover{color:var(--ink)}
@@ -207,7 +210,10 @@
 
 <header class="nav">
   <div class="wrap nav-inner">
-    <a href="#" class="brand"><span class="dot"></span> Power Design</a>
+    <div class="brand-wrap">
+      <a href="#" class="brand"><span class="dot"></span> Power Design</a>
+      <a href="https://inema.club" class="brand-by" target="_blank" rel="noopener">inema.club</a>
+    </div>
     <nav>
       <a class="link" href="#principios">Princípios</a>
       <a class="link" href="#como-funciona">Como funciona</a>
