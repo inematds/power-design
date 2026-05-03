@@ -9,7 +9,7 @@
 **Brand DNA × 20 princípios de design codificados → decks HTML bonitos, sob demanda.**
 
 [**Ver os princípios →**](https://inematds.github.io/power-design/) ·
-[**Comunidade →**](https://bit.ly/3PATPoL)
+[**Comunidade →**](https://inema.club)
 
 </div>
 
@@ -132,6 +132,6 @@ MIT — veja [LICENSE](LICENSE).
 <div align="center">
 
 [**Princípios →**](https://inematds.github.io/power-design/) ·
-[**Comunidade →**](https://bit.ly/3PATPoL)
+[**Comunidade →**](https://inema.club)
 
 </div>
