@@ -152,6 +152,37 @@
   .foot a:hover{color:var(--accent)}
 
   ::selection{background:var(--accent);color:#fff}
+
+  /* section nav banner */
+  .sec-nav-wrap{background:var(--ink);padding:28px 0;border-top:1px solid #1a1a1d}
+  .sec-nav-label{font-family:'JetBrains Mono',monospace;font-size:11px;color:#555;text-transform:uppercase;letter-spacing:.14em;margin-bottom:14px}
+  .sec-pills{display:flex;flex-wrap:wrap;gap:8px}
+  .sec-pill{display:inline-flex;align-items:center;padding:8px 14px;border:1px solid #2a2a2e;border-radius:999px;font-size:13px;font-weight:500;color:#aaa;text-decoration:none;font-family:'JetBrains Mono',monospace;transition:border-color .2s,color .2s}
+  .sec-pill:hover{border-color:var(--accent);color:#fff}
+
+  /* deep sections */
+  .deep-sec{padding:80px 0;border-bottom:1px solid var(--rule)}
+  .deep-sec-alt{background:var(--paper-2)}
+  .deep-head{margin-bottom:40px;padding-bottom:28px;border-bottom:1px solid var(--rule)}
+  .deep-num{color:var(--muted);margin-bottom:8px}
+  .deep-title{font-family:'Fraunces',serif;font-weight:600;font-size:clamp(28px,3.5vw,44px);line-height:1.05;letter-spacing:-.02em;margin:0 0 10px}
+  .deep-sub{color:var(--muted);margin:0;font-size:15px}
+
+  /* principles grid */
+  .principles-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:20px}
+  @media(max-width:960px){.principles-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:600px){.principles-grid{grid-template-columns:1fr}}
+  .principle-card{background:var(--card);border:1px solid var(--rule);border-radius:14px;padding:24px;display:flex;flex-direction:column;gap:12px}
+  .pc-tag{font-family:'Fraunces',serif;font-weight:600;font-size:17px;line-height:1.2;letter-spacing:-.01em;color:var(--ink)}
+  .pc-source{font-size:12px;color:var(--muted);font-style:italic;line-height:1.5}
+  .pc-rules{margin:0;padding-left:16px;display:flex;flex-direction:column;gap:6px}
+  .pc-rules li{font-size:14px;color:var(--ink-2);line-height:1.5}
+  .pc-note{font-size:13px;color:var(--ink-2);line-height:1.5;background:var(--paper-2);border-left:3px solid var(--accent);padding:10px 12px;border-radius:0 8px 8px 0}
+  .pc-example{font-size:13px;color:var(--ink-2);line-height:1.5;background:var(--paper);border:1px dashed var(--rule);padding:10px 12px;border-radius:8px}
+  .pc-table{overflow-x:auto}
+  .pc-table table{width:100%;border-collapse:collapse;font-size:13px}
+  .pc-table th{text-align:left;padding:6px 10px;background:var(--paper-2);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
+  .pc-table td{padding:7px 10px;border-bottom:1px solid var(--rule);color:var(--ink-2)}
 </style>
 </head>
 <body>
@@ -196,6 +227,535 @@
       <p>Cada slide passa pelos mesmos 20 critérios — tirados de Tufte, Reynolds, Duarte, Williams, Refactoring UI, Müller-Brockmann, Mayer e WCAG 2.2.</p>
     </div>
     <div class="rules" id="rule-grid"></div>
+  </div>
+</section>
+
+<!-- BANNER DE NAVEGAÇÃO DAS 7 SEÇÕES -->
+<div class="sec-nav-wrap">
+  <div class="wrap">
+    <div class="sec-nav-label">Aprofunde-se nas 7 seções</div>
+    <div class="sec-pills">
+      <a class="sec-pill" href="#sec-1">01 · Carga Cognitiva</a>
+      <a class="sec-pill" href="#sec-2">02 · Hierarquia Visual</a>
+      <a class="sec-pill" href="#sec-3">03 · Gestalt</a>
+      <a class="sec-pill" href="#sec-4">04 · Tipografia</a>
+      <a class="sec-pill" href="#sec-5">05 · Cor e Contraste</a>
+      <a class="sec-pill" href="#sec-6">06 · Sistemas Espaciais</a>
+      <a class="sec-pill" href="#sec-7">07 · Alinhamento e Ritmo</a>
+    </div>
+  </div>
+</div>
+
+<!-- SEÇÃO 1 -->
+<section id="sec-1" class="deep-sec">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 01</div>
+      <h2 class="deep-title">Carga Cognitiva e Atenção</h2>
+      <p class="deep-sub">Regras 01–03 · Como o cérebro processa um slide em ≤3 segundos.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Lei de Miller</div>
+        <div class="pc-source">George Miller (1956); refinado por Cowan (2001) para ~4 blocos.</div>
+        <ul class="pc-rules">
+          <li>Máximo 7 elementos visuais distintos por slide antes de agrupar.</li>
+          <li>Alvo de 3–5 blocos após agrupamento (cards, colunas, ícones com rótulos).</li>
+          <li>Se itens &gt; 5, agrupe por proximidade/bordas/cards em ≤5 super-blocos.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Slides são escaneados, não estudados — aplique o limite mais restrito de Cowan (4 ± 1). Uma lista com 6 bullets viola isso; reduza para 4 ou divida.</div>
+        <div class="pc-example"><strong>Exemplo:</strong> 9 logos em fileira → agrupe em 3 cards de 3 ("Frontend / Backend / Infra"). Um bloco por card.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Lei de Hick</div>
+        <div class="pc-source">Hick &amp; Hyman (1952). Tempo de decisão ∝ log₂(n+1) onde n = número de escolhas.</div>
+        <ul class="pc-rules">
+          <li>Por slide: ≤1 chamada para ação e ≤1 decisão.</li>
+          <li>Se o slide convida uma escolha (ex.: "qual plano?"), limite as opções visíveis a 3.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Slides de precificação violam isso rotineiramente com 4–5 níveis. Recomendação: 3 níveis, um destacado visualmente como padrão.</div>
+        <div class="pc-example"><strong>Exemplo:</strong> 3 cards de preço com o do meio escalado 1.05× e com a cor de destaque. O tempo de decisão cai porque o sistema já escolheu pelo espectador.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Lei de Fitts</div>
+        <div class="pc-source">Paul Fitts (1954). Tempo para atingir um alvo ∝ distância / tamanho.</div>
+        <ul class="pc-rules">
+          <li>O elemento focal dominante deve ocupar ≥25% da área do slide ou ser ≥3× maior que os secundários.</li>
+          <li>Elementos interativos (raros em slides) ≥44 × 44 px.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Em slides, Fitts é sobre <em>aquisição visual</em>, não clique. Tradução: o título precisa ser encontrado em um único movimento ocular.</div>
+        <div class="pc-example"><strong>Exemplo:</strong> Título em 72px vs. corpo em 24px = proporção 3:1 — o olho pousa no título primeiro, sempre.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Uma Ideia por Slide</div>
+        <div class="pc-source">Garr Reynolds, <em>Presentation Zen</em> (2008); Nancy Duarte, <em>Slide:ology</em> (2008).</div>
+        <ul class="pc-rules">
+          <li>1 título por slide (≤10 palavras, ideal 5–7).</li>
+          <li>1 bloco de suporte (gráfico, imagem, lista ou citação) — não dois.</li>
+          <li>Se o slide tenta fazer 2 argumentos, divida em 2 slides.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Use a contagem de slides como recurso livre — nunca comprima duas ideias para economizar um slide.</div>
+        <div class="pc-example"><strong>Violação:</strong> "A receita do T3 cresceu 22% E a retenção de usuários atingiu 91%" com dois gráficos. <strong>Correção:</strong> dois slides separados, um por métrica.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Relação Sinal-Ruído</div>
+        <div class="pc-source">Edward Tufte, <em>The Visual Display of Quantitative Information</em> (1983).</div>
+        <ul class="pc-rules">
+          <li>Todo pixel sem dados é candidato à exclusão. Teste: remova o elemento — a compreensão cai? Se não, delete permanentemente.</li>
+          <li>Sem sombras &gt;4px, sem gradientes em superfícies não-significativas, sem bordas decorativas, sem padrões de fundo atrás de texto.</li>
+          <li>Logos apenas no slide de título e encerramento — nunca repetidos no rodapé de slides internos.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Essa é a regra mais violada por decks "desenhados". Bonito ≠ decorado.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Não Me Faça Pensar</div>
+        <div class="pc-source">Steve Krug (2000, rev. 2014).</div>
+        <ul class="pc-rules">
+          <li>Um slide deve exigir zero esforço cognitivo para entender a estrutura — apenas o conteúdo.</li>
+          <li>Se o espectador pergunta "o que estou vendo?" antes de "o que isso significa?", o layout falhou.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Título sempre no topo, corpo sempre abaixo, visual de suporte sempre pareado com a afirmação que suporta, citação de fonte sempre no canto inferior direito em 14–16px com 50% de opacidade.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 2 -->
+<section id="sec-2" class="deep-sec deep-sec-alt">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 02</div>
+      <h2 class="deep-title">Hierarquia Visual</h2>
+      <p class="deep-sub">Regra 19 + complementares · O que o olho vê primeiro e por quê.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Ênfase por Escala</div>
+        <div class="pc-source">Müller-Brockmann; Refactoring UI (Wathan &amp; Schoger 2018).</div>
+        <ul class="pc-rules">
+          <li>Elemento primário ≥2× o tamanho do secundário; secundário ≥1.5× o terciário.</li>
+          <li>Evite tamanhos com diferença de apenas 10–20% — o olho os lê como iguais.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Proporção título:corpo ∈ [2.0, 4.0]. Proporção subtítulo:corpo ∈ [1.25, 1.5].</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Ênfase por Peso</div>
+        <div class="pc-source">Refactoring UI; Bringhurst, <em>Elements of Typographic Style</em>.</div>
+        <ul class="pc-rules">
+          <li>Use peso antes de tamanho para ênfase inline. Negrito (600–700) para ênfase, regular (400) para corpo.</li>
+          <li>Evite pesos abaixo de 300 na tela — desaparecem sob projeção.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Pesos permitidos = {400, 500, 600, 700, opcionalmente 800/900 para destaque}. Proibidos para corpo: 100, 200, 300.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Ênfase por Cor (destaque único)</div>
+        <div class="pc-source">Tufte, "menor diferença eficaz"; Schoger.</div>
+        <ul class="pc-rules">
+          <li>Use escala de cinza neutra para 90% da interface/texto.</li>
+          <li>Reserve o destaque em saturação total para a única coisa que o espectador precisa ver.</li>
+          <li>Por slide: ≤1 elemento com cor de destaque.</li>
+        </ul>
+        <div class="pc-example"><strong>Exemplo:</strong> Texto preto em todo lugar; apenas o número KPI está em laranja da marca.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Padrão F / Z de Leitura</div>
+        <div class="pc-source">Nielsen Norman Group — estudos de rastreamento ocular (2006, 2017, 2023).</div>
+        <ul class="pc-rules">
+          <li>Slides com muito texto: padrão F. Título no canto superior esquerdo, visual principal ao longo do topo horizontal, conteúdo secundário na borda esquerda vertical.</li>
+          <li>Slides guiados por imagem: padrão Z. Superior esquerdo → superior direito → diagonal → inferior direito (CTA).</li>
+          <li>Coloque o elemento mais importante no quadrante superior esquerdo ou nos primeiros 30% da altura do slide.</li>
+        </ul>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Ponto Focal Único</div>
+        <div class="pc-source">Reynolds; Duarte; teoria clássica da composição.</div>
+        <ul class="pc-rules">
+          <li>Cada slide tem exatamente 1 ponto focal.</li>
+          <li>Tamanho, cor, contraste, posição ou isolamento devem tornar um elemento claramente dominante.</li>
+          <li>Teste: pisque — o que você vê primeiro?</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> O maior elemento é ≥1.5× a área do próximo maior, OU é o único elemento saturado em cor, OU está isolado por ≥48px a mais de espaço em branco que qualquer outro.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 3 -->
+<section id="sec-3" class="deep-sec">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 03</div>
+      <h2 class="deep-title">Princípios Gestalt</h2>
+      <p class="deep-sub">Regras 03 e 17 · Como a percepção visual organiza elementos em grupos.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Proximidade</div>
+        <div class="pc-source">Wertheimer (1923); Williams, <em>Non-Designer's Design Book</em> (CRAP).</div>
+        <ul class="pc-rules">
+          <li>Itens relacionados: ≤16px de distância (grade 8pt: 8 ou 16).</li>
+          <li>Itens não relacionados: ≥48px de distância (48, 64, 96).</li>
+          <li>O espaço entre grupos deve ser ≥2× o espaço dentro dos grupos.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Proximidade é a ferramenta de hierarquia mais barata — use-a antes de bordas ou cor.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Similaridade</div>
+        <div class="pc-source">Wertheimer; escola Gestalt.</div>
+        <ul class="pc-rules">
+          <li>Mesmo tratamento visual ⇒ mesmo papel. Se dois itens parecem iguais, o espectador assume que são do mesmo tipo.</li>
+          <li>Não estilize títulos e corpo da mesma forma; não estilize links e negrito da mesma forma.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Cada papel (título, corpo, legenda, link, número destaque) tem exatamente uma especificação de estilo.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Região Comum (containers)</div>
+        <div class="pc-source">Stephen Palmer (1992).</div>
+        <ul class="pc-rules">
+          <li>Itens dentro do mesmo container (card, painel, caixa) são percebidos como um grupo, mesmo que a proximidade seja fraca.</li>
+          <li>Use cards para agrupar ≥3 itens relacionados quando a proximidade sozinha é ambígua.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Padding do card ≥24px em todos os lados; espaço entre cards ≥24px.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Figura / Fundo</div>
+        <div class="pc-source">Edgar Rubin (1915).</div>
+        <ul class="pc-rules">
+          <li>Primeiro plano e fundo devem ser inequivocamente separáveis.</li>
+          <li>Texto sobre imagem requer: (a) overlay com opacidade ≥40%, (b) sombra de texto ≥2px / 30% de opacidade, ou (c) texto deslocado para zona de cor sólida.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Quando texto sobrepõe imagem, meça o contraste em 9 pontos ao longo do bounding box do texto; proporção mínima 4.5:1 em todo ponto.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Fechamento e Continuidade</div>
+        <div class="pc-source">Wertheimer.</div>
+        <ul class="pc-rules">
+          <li>Evite bordas pesadas quando o alinhamento implícito alcança o mesmo agrupamento.</li>
+          <li>Use linhas/bordas contínuas para guiar o olhar entre elementos relacionados (ex.: uma linha conectando uma citação à foto do orador).</li>
+        </ul>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Simetria</div>
+        <div class="pc-source">Gestalt; Tschichold (<em>Die neue Typographie</em>).</div>
+        <ul class="pc-rules">
+          <li>Totalmente simétrico (slides de título centrados, divisores de seção) ou deliberadamente assimétrico em uma grade.</li>
+          <li><strong>Nunca acidentalmente quase-simétrico</strong> — um deslocamento de 10px parece erro.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Se a distância horizontal do centro difere em ≤5% da largura do slide, encaixe no centro verdadeiro; caso contrário, imponha ≥15% de assimetria para que o deslocamento pareça intencional.</div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 4 -->
+<section id="sec-4" class="deep-sec deep-sec-alt">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 04</div>
+      <h2 class="deep-title">Tipografia</h2>
+      <p class="deep-sub">Regras 06–10 · Escala, peso, entrelinha, comprimento de linha e tamanhos mínimos.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Escala Modular de Tipos</div>
+        <div class="pc-source">Tim Brown, <em>Modular Scale</em>; Bringhurst.</div>
+        <ul class="pc-rules">
+          <li>1.200 (terça menor) — decks compactos.</li>
+          <li>1.250 (terça maior) — equilibrado, padrão para slides.</li>
+          <li>1.333 (quarta perfeita) — confiante, ideal para apresentações.</li>
+          <li>1.414 (quarta aumentada, √2) — contraste forte.</li>
+          <li>1.500 (quinta perfeita) — slides herói de alto impacto.</li>
+          <li>1.618 (áureo) — editorial.</li>
+        </ul>
+        <div class="pc-note"><strong>Padrão para slides:</strong> 1.333 com base 20px → 20, 27, 36, 48, 64, 85, 113. Arredonde para valores compatíveis com grade de 8pt: 20, 28, 36, 48, 64, 84, 112.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Combinação de Fontes</div>
+        <div class="pc-source">Butterick, <em>Practical Typography</em>; Bringhurst.</div>
+        <ul class="pc-rules">
+          <li>Máximo 2 tipos por deck (destaque + corpo). Devem contrastar em pelo menos um de: classificação (serifa vs. sem serifa), largura, personalidade de peso.</li>
+          <li>Evite duas fontes sem serifa que pareçam similares.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Se 2 fontes, uma deve ser serifada e a outra sem serifa, OU devem ser de superfamílias diferentes. Decks com uma única família também são válidos e frequentemente mais seguros.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Entrelinha (leading)</div>
+        <div class="pc-source">Bringhurst; Butterick.</div>
+        <ul class="pc-rules">
+          <li>Corpo (16–24px): entrelinha 1.4–1.6.</li>
+          <li>Subtítulos (24–40px): 1.25–1.4.</li>
+          <li>Destaque (≥48px): 1.0–1.2.</li>
+          <li>Títulos compactos: 0.95 aceitável para destaque muito grande.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> <code>line-height = 1.5 - (font-size-px - 16) × 0.005</code>, limitado a [1.0, 1.6].</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Espaçamento entre Letras</div>
+        <div class="pc-source">Bringhurst; Refactoring UI.</div>
+        <ul class="pc-rules">
+          <li>Destaque ≥48px: aperte –0.5% a –2% (CSS <code>letter-spacing: -0.01em</code> a <code>-0.02em</code>).</li>
+          <li>Corpo 16–24px: 0 (padrão).</li>
+          <li>CAIXA ALTA ou versalete: abra +5% a +10% (<code>+0.05em</code> a <code>+0.1em</code>).</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Títulos grandes sem tracking negativo parecem arejados e amadores.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Comprimento de Linha</div>
+        <div class="pc-source">Bringhurst (45–75 caracteres); Butterick (45–90).</div>
+        <ul class="pc-rules">
+          <li>Linhas de corpo ≤60 caracteres.</li>
+          <li>Destaque ≤30 caracteres por linha.</li>
+          <li>Slides não deveriam ter parágrafos — mas quando tiverem, limite a largura.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> <code>max-width: 60ch</code> para corpo, <code>30ch</code> para destaque.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Tamanho Mínimo Legível</div>
+        <div class="pc-source">Reynolds; Duarte; diretrizes de projeção.</div>
+        <ul class="pc-rules">
+          <li>1920×1080 em tela: corpo ≥24px, título ≥48px, legenda mínima 18px.</li>
+          <li>Projetado em escala de conferência: corpo ≥28pt equivalente (~37px em 1920×1080).</li>
+          <li>Rodapé/citações de fonte: 14–16px, 50–60% de opacidade.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 5 -->
+<section id="sec-5" class="deep-sec">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 05</div>
+      <h2 class="deep-title">Cor e Contraste</h2>
+      <p class="deep-sub">Regras 11–14 · Distribuição, harmonia, acessibilidade e o sistema de destaque único.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Distribuição de Cor 60-30-10</div>
+        <div class="pc-source">Tradição Itten/Albers; codificado para UI pelo Refactoring UI.</div>
+        <ul class="pc-rules">
+          <li>60% dominante (tipicamente fundo neutro), 30% secundária (texto + superfícies de UI), 10% destaque (o que se destaca).</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Amostre os pixels do slide — a cor de destaque deve ocupar 5–15% da área de pixels; se &gt;15%, reduza; se &lt;2%, o slide não tem focal de destaque.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Mínimos de Contraste WCAG</div>
+        <div class="pc-source">WCAG 2.1 / 2.2 (W3C).</div>
+        <div class="pc-table">
+          <table>
+            <thead><tr><th>Elemento</th><th>AA</th><th>AAA</th></tr></thead>
+            <tbody>
+              <tr><td>Texto corpo (&lt;24px regular)</td><td>4.5:1</td><td>7:1</td></tr>
+              <tr><td>Texto grande (≥24px regular)</td><td>3:1</td><td>4.5:1</td></tr>
+              <tr><td>Componentes UI / objetos gráficos</td><td>3:1</td><td>—</td></tr>
+            </tbody>
+          </table>
+        </div>
+        <div class="pc-note"><strong>Nota para slides:</strong> Mire em AAA (7:1) porque projetores reduzem o contraste em 30–50%. Uma proporção de 4.5:1 no design = 2–3:1 em um projetor real.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Esquemas de Harmonia de Cores</div>
+        <div class="pc-source">Roda de cores Itten; Albers, <em>Interaction of Color</em>.</div>
+        <ul class="pc-rules">
+          <li><strong>Monocromático:</strong> um matiz, varie L e S apenas. Mais seguro.</li>
+          <li><strong>Análogo:</strong> 3 matizes dentro de 30°. Calmo, harmonioso.</li>
+          <li><strong>Complementar:</strong> 2 matizes a 180°. Alta tensão; use um apenas como destaque.</li>
+          <li><strong>Split-complementar:</strong> base + 2 matizes flanqueando seu complemento. Mais seguro que complementar.</li>
+          <li><strong>Triádico:</strong> 3 matizes a 120°. Vibrante, mas difícil de equilibrar.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Todas as cores de destaque devem derivar de um esquema; nunca misture complementar + análogo no mesmo deck.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Raciocínio HSL vs Hex</div>
+        <div class="pc-source">Refactoring UI.</div>
+        <ul class="pc-rules">
+          <li>Construa paletas mantendo o matiz constante e variando L (luminosidade) e S (saturação).</li>
+          <li>Gere 9 tons por matiz (50, 100, 200…900).</li>
+          <li>Para texto sobre fundo, pareie tons com diferença numérica ≥400.</li>
+        </ul>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Nunca Codificar Significado Apenas por Cor</div>
+        <div class="pc-source">WCAG 1.4.1; Brewer, <em>ColorBrewer</em>.</div>
+        <ul class="pc-rules">
+          <li>Qualquer distinção codificada por cor deve também carregar uma pista sem cor: forma, rótulo, ícone, peso ou posição.</li>
+          <li>~8% dos homens têm daltonismo vermelho-verde.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Para qualquer gráfico com ≥2 séries de dados, pareie cor com padrão/forma/rótulo.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Sistema de Destaque Único</div>
+        <div class="pc-source">Tufte's "menor diferença eficaz"; Schoger.</div>
+        <ul class="pc-rules">
+          <li>Por deck, uma cor de destaque; por slide, um momento de destaque.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 6 -->
+<section id="sec-6" class="deep-sec deep-sec-alt">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 06</div>
+      <h2 class="deep-title">Sistemas Espaciais</h2>
+      <p class="deep-sub">Regras 04–05 e 15–16 · Grade de 8pt, proporção áurea, espaço em branco e margens.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Grade de 8 Pontos</div>
+        <div class="pc-source">Bryn Jackson, "The 8-Point Grid" (Spec FM, 2015); Material Design (Google).</div>
+        <ul class="pc-rules">
+          <li>Toda margem, espaçamento interno, intervalo e dimensão de componente é múltipla de 8px.</li>
+          <li>Incrementos de 4px permitidos apenas para espaçamento interno de ícones.</li>
+        </ul>
+        <div class="pc-note"><strong>Escala de espaçamento:</strong> 4, 8, 12, 16, 24, 32, 40, 48, 64, 80, 96, 128, 160, 192, 256. Em 1920×1080, a margem lateral natural do slide é 96px (5%), o espaço entre cards é 32–48px, o padding interno do card é 32–48px.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Grade Modular / Colunar</div>
+        <div class="pc-source">Müller-Brockmann, <em>Grid Systems in Graphic Design</em> (1981).</div>
+        <ul class="pc-rules">
+          <li>Use uma grade de 12 colunas com calhas de 24–32px e margem externa de 96px em 1920×1080.</li>
+          <li>Todo elemento encaixa nas bordas das colunas.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Largura da coluna = (1920 – 2×96 – 11×32) / 12 ≈ 117px. Expansões comuns: 4-col (terço), 6-col (metade), 8-col (dois terços), 12-col (total).</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Proporção Áurea (1.618)</div>
+        <div class="pc-source">Vitrúvio; Le Corbusier (Modulor); Tschichold.</div>
+        <ul class="pc-rules">
+          <li>Onde um slide se divide em duas zonas, prefira uma divisão 1:1.618 (≈38% / 62%).</li>
+          <li>Para largura de 1920: 733px / 1187px.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Use com moderação — a proporção áurea é uma ferramenta, não uma religião. A grade de 8pt é o driver diário; a proporção áurea é reservada para slides herói/título.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Regra dos Terços</div>
+        <div class="pc-source">John Thomas Smith (1797); composição fotográfica padrão.</div>
+        <ul class="pc-rules">
+          <li>Divida o slide em uma grade 3×3. Coloque pontos focais nas interseções.</li>
+          <li>Para 1920×1080, interseções em (640,360), (1280,360), (640,720), (1280,720).</li>
+        </ul>
+        <div class="pc-note"><strong>Aplicação:</strong> Slides herói — coloque os olhos/elemento focal do sujeito em uma interseção dos terços, título ao longo da linha do terço inferior.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Proporção de Espaço em Branco</div>
+        <div class="pc-source">Reynolds (<em>Presentation Zen</em>); Refactoring UI.</div>
+        <ul class="pc-rules">
+          <li>Slides de informação: ≥40% de pixels vazios.</li>
+          <li>Slides herói/título/seção: ≥60% de pixels vazios.</li>
+          <li>Slides de citação: ≥70% de pixels vazios.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Renderize o slide; conte pixels correspondentes à cor de fundo. Se abaixo do limite, aumente o espaçamento/reduza o conteúdo.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Espaço em Branco Ativo vs Passivo</div>
+        <div class="pc-source">Mark Boulton, <em>A Practical Guide to Designing for the Web</em>.</div>
+        <ul class="pc-rules">
+          <li>Espaço em branco dentro de componentes compactos (entrelinha, padding) é <em>passivo</em>.</li>
+          <li>Espaço em branco separando seções é <em>ativo</em>.</li>
+          <li>Aumente o espaço ativo antes de reduzir o passivo — nunca comprima a entrelinha para criar espaço.</li>
+        </ul>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- SEÇÃO 7 -->
+<section id="sec-7" class="deep-sec">
+  <div class="wrap">
+    <div class="deep-head">
+      <div class="deep-num mono">SEÇÃO 07</div>
+      <h2 class="deep-title">Alinhamento e Ritmo</h2>
+      <p class="deep-sub">Regra 16 + complementares · Grade estrita, ritmo vertical e zona de segurança.</p>
+    </div>
+    <div class="principles-grid">
+
+      <div class="principle-card">
+        <div class="pc-tag">Alinhamento Estrito à Grade</div>
+        <div class="pc-source">Tschichold; Müller-Brockmann; Williams (CRAP).</div>
+        <ul class="pc-rules">
+          <li>Todo elemento alinha a ≥1 linha de grade (esquerda, direita, centro, topo, linha de base).</li>
+          <li>Nenhum elemento flutua fora da grade.</li>
+          <li>Desalinhamentos ≤4px são encaixados automaticamente.</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Mantenha uma lista de posições X válidas (bordas de colunas) e posições Y (grade de 8pt); encaixe todo elemento na renderização.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Ritmo Vertical / Grade de Baseline</div>
+        <div class="pc-source">Bringhurst; tradição de grade de baseline.</div>
+        <ul class="pc-rules">
+          <li>Incrementos de espaçamento vertical são múltiplos da entrelinha do corpo.</li>
+          <li>Com corpo 24px × 1.5 = linha 36px, espaços verticais = 36, 72, 108, 144px.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Uma grade de baseline pura é difícil de manter em slides; uma grade vertical de 8pt é o compromisso prático.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Alinhamento Óptico vs Matemático</div>
+        <div class="pc-source">Bringhurst; Butterick.</div>
+        <ul class="pc-rules">
+          <li>Para formas circulares/triangulares, ícones e pontuação grande, substitua o centro matemático por 1–4px para que a forma <em>pareça</em> centralizada.</li>
+          <li>Aspas, bullets e asteriscos devem "pendurar" fora do bloco de texto (hanging punctuation).</li>
+        </ul>
+        <div class="pc-note"><strong>Codificável:</strong> Tabela de offset óptico — círculos +0%; triângulos –4% horizontal; ícones tipicamente –1 a –2px para cima.</div>
+      </div>
+
+      <div class="principle-card">
+        <div class="pc-tag">Zona de Segurança nas Bordas</div>
+        <div class="pc-source">Convenção broadcast title-safe; Apple HIG margins.</div>
+        <ul class="pc-rules">
+          <li>Nenhum texto, logo ou elemento focal dentro de 5% de qualquer borda do slide.</li>
+          <li>Em 1920×1080, isso é ≥96px em todos os lados.</li>
+        </ul>
+        <div class="pc-note"><strong>Nota:</strong> Se o slide será projetado e as primeiras fileiras verão corte nas bordas, aumente para 8% (154px).</div>
+      </div>
+
+    </div>
   </div>
 </section>
 
