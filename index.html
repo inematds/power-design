@@ -183,6 +183,24 @@
   .pc-table table{width:100%;border-collapse:collapse;font-size:13px}
   .pc-table th{text-align:left;padding:6px 10px;background:var(--paper-2);font-family:'JetBrains Mono',monospace;font-size:11px;text-transform:uppercase;letter-spacing:.08em;color:var(--muted)}
   .pc-table td{padding:7px 10px;border-bottom:1px solid var(--rule);color:var(--ink-2)}
+
+  /* uso grid */
+  .uso-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+  @media(max-width:900px){.uso-grid{grid-template-columns:1fr}}
+  .uso-bloco{background:var(--card);border:1px solid var(--rule);border-radius:16px;padding:28px;display:flex;flex-direction:column;gap:16px}
+  .uso-bloco-full{grid-column:1/-1}
+  .uso-titulo{font-family:'Fraunces',serif;font-weight:600;font-size:20px;letter-spacing:-.01em;display:flex;align-items:center;gap:10px}
+  .uso-n{display:inline-flex;align-items:center;justify-content:center;width:28px;height:28px;border-radius:999px;background:var(--accent);color:#fff;font-family:'JetBrains Mono',monospace;font-size:13px;font-weight:600;font-style:normal;flex-shrink:0}
+  .uso-desc{margin:0;font-size:15px;color:var(--ink-2);line-height:1.6}
+  .uso-exemplo{background:var(--paper-2);border-radius:10px;padding:16px}
+  .uso-ex-label{color:var(--muted);margin-bottom:10px;display:block}
+  .uso-tags{display:flex;flex-wrap:wrap;gap:6px}
+  .uso-tags span{font-size:13px;color:var(--ink-2);background:var(--card);border:1px solid var(--rule);padding:4px 10px;border-radius:999px}
+  .uso-resultado-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+  @media(max-width:780px){.uso-resultado-grid{grid-template-columns:repeat(2,1fr)}}
+  @media(max-width:480px){.uso-resultado-grid{grid-template-columns:1fr}}
+  .uso-res{font-size:14px;color:var(--ink-2);line-height:1.6;background:var(--paper-2);padding:16px;border-radius:10px}
+  .uso-res strong{color:var(--ink);display:block;margin-bottom:4px}
 </style>
 </head>
 <body>
@@ -762,41 +780,55 @@
 <section id="como-funciona" style="background:var(--paper-2);border-top:1px solid var(--rule);border-bottom:1px solid var(--rule)">
   <div class="wrap">
     <div class="section-head">
-      <h2>Como a skill funciona.</h2>
-      <p>Três camadas, um arquivo HTML. O runbook está em <span class="mono">SKILL.md</span>; as regras em <span class="mono">principles/design-principles.md</span>.</p>
+      <h2>Como instalar e usar.</h2>
+      <p>Power Design é uma skill do Claude Code. Em três passos você gera uma apresentação profissional — um arquivo HTML pronto para abrir no navegador, imprimir ou exportar como PDF.</p>
     </div>
-    <div class="how">
-      <ol>
-        <li>
-          <div>
-            <h4>DNA de Marca</h4>
-            <p>Cole uma URL — o Firecrawl extrai cores, tipografia, voz e componentes em ~30 segundos. Ou escolha um dos 72 sistemas de marca pré-prontos.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h4>Regras de design</h4>
-            <p>Os 20 princípios são carregados como limites numéricos — proporção de espaço em branco, contraste, escala modular, grade de 8pt — não como intuição.</p>
-          </div>
-        </li>
-        <li>
-          <div>
-            <h4>Composição</h4>
-            <p>Marca × regras → <span class="mono">slides.html</span>. Abra no navegador. Refine via conversa natural.</p>
-          </div>
-        </li>
-      </ol>
-      <div>
+
+    <div class="uso-grid">
+
+      <div class="uso-bloco">
+        <div class="uso-titulo"><span class="uso-n">1</span> Instale a skill</div>
+        <p class="uso-desc">Copie o repositório para a pasta de skills do Claude Code. Faça isso uma única vez.</p>
         <div class="install">
-<span class="c"># Instalar</span>
+<span class="c"># Execute no terminal</span>
 <span class="p">git clone</span> https://github.com/inematds/power-design \
   ~/.claude/skills/power-design
-
-<span class="c"># No Claude Code</span>
-<span class="p">&gt;</span> use power-design — crie um deck para
-  <span class="s">stripe.com</span> sobre o nosso novo lançamento
         </div>
       </div>
+
+      <div class="uso-bloco">
+        <div class="uso-titulo"><span class="uso-n">2</span> Escolha uma marca</div>
+        <p class="uso-desc">Há 72+ marcas prontas (Stripe, Apple, Notion, Tesla…). Você também pode colar qualquer URL e a skill extrai as cores, fontes e estilo automaticamente.</p>
+        <div class="uso-exemplo">
+          <div class="uso-ex-label mono">Exemplos de marca</div>
+          <div class="uso-tags">
+            <span>stripe.com</span><span>apple.com</span><span>notion.so</span>
+            <span>linear.app</span><span>tesla.com</span><span>ou qualquer URL</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="uso-bloco">
+        <div class="uso-titulo"><span class="uso-n">3</span> Peça a apresentação</div>
+        <p class="uso-desc">No Claude Code, diga o tema e a marca. A skill monta os slides aplicando os 20 princípios de design automaticamente. Refine conversando.</p>
+        <div class="install">
+<span class="c"># No Claude Code, digite:</span>
+<span class="p">&gt;</span> use power-design — crie uma apresentação
+  para <span class="s">stripe.com</span> sobre o nosso
+  novo produto. 8 slides, modo apresentação.
+        </div>
+      </div>
+
+      <div class="uso-bloco uso-bloco-full">
+        <div class="uso-titulo"><span class="uso-n">✓</span> O que você recebe</div>
+        <div class="uso-resultado-grid">
+          <div class="uso-res"><strong>slides.html</strong><br>Arquivo único. Abra no navegador, navegue com as setas do teclado.</div>
+          <div class="uso-res"><strong>Marca aplicada</strong><br>Cores, tipografia e voz da marca escolhida, extraídas ao vivo ou da biblioteca.</div>
+          <div class="uso-res"><strong>20 regras garantidas</strong><br>Contraste, espaço em branco, hierarquia e grade verificados automaticamente.</div>
+          <div class="uso-res"><strong>Refinamento fácil</strong><br>"Mude o tom para mais formal", "adicione um slide de dados", "use menos texto" — só falar.</div>
+        </div>
+      </div>
+
     </div>
   </div>
 </section>
